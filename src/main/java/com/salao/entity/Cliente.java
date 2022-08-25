@@ -28,6 +28,6 @@ public class Cliente implements Serializable {
     private String telefone;
 
     @OneToMany(mappedBy="cliente", fetch = FetchType.LAZY)
-    @JsonBackReference //as comandas de clientes nao vao ser serializados
+    @JsonIgnore //as comandas de clientes nao vao ser serializados
     private List<Comanda> comandas;
 }

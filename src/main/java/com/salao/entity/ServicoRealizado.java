@@ -1,6 +1,8 @@
 package com.salao.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,6 +18,8 @@ public class ServicoRealizado implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @JsonIgnore
+    //@JsonManagedReference
+    //@JsonBackReference
     @EmbeddedId
     private ServicoRealizadoPK id = new ServicoRealizadoPK();
 
@@ -45,7 +49,7 @@ public class ServicoRealizado implements Serializable {
         id.setServico(servico);
     }
 
-    @JsonIgnore
+    //@JsonIgnore
     public Servico getServico() {
         return id.getServico();
     }

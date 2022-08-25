@@ -26,14 +26,13 @@ public class Comanda implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
-    @JsonManagedReference
     private Cliente cliente;
 
     private Integer formaPagamento; //aula 22 parte1 prof nelioalves. Recurso para guardar o Enum em um integer.
     private BigDecimal valorTotal;
 
-    @JsonIgnore
-    @OneToMany(mappedBy="id.comanda", fetch = FetchType.EAGER)
+    //@JsonIgnore // comentado para aparecer a lista de servicos
+    @OneToMany(mappedBy="id.comanda", fetch = FetchType.LAZY)
     private Set<ServicoRealizado> servicosRealizados = new HashSet<>(); // set pq nao vai ter o mesmo servico realizado mais de uma vez na mesa comanda
 
     public Comanda(LocalDateTime data, Cliente cliente, FormaPagamento formaPagamento, BigDecimal valorTotal) {

@@ -26,7 +26,11 @@ public class ClienteService {
             throw new ObjectNotFoundException("Id do cliente nao encontrado! Id: " + id + ", Tipo:"
                     + Cliente.class.getName());
         }
-
         return clienteRepository.findById(id).get();
+    }
+
+    public Cliente insert(Cliente obj){
+        obj.setId(null);
+        return clienteRepository.save(obj);
     }
 }
