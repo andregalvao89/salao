@@ -1,9 +1,11 @@
 package com.salao.services;
 
 import com.salao.entity.Cliente;
+import com.salao.services.exception.DataIntegrityException;
 import com.salao.services.exception.ObjectNotFoundException;
 import com.salao.repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -40,4 +42,15 @@ public class ClienteService {
         return clienteRepository.save(obj);
     }
 
+    public void delete(Long id) {
+        getCliente(id);
+        try {
+            clienteRepository.deleteById(id);
+        }
+        catch (DataIntegrityViolationException e) {
+            throw new DataIntegrityException("Não é possível excluir um cliente que possui comanda");
+        }
+    }
 }
+
+
