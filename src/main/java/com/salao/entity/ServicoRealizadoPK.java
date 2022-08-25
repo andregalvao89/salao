@@ -1,6 +1,6 @@
 package com.salao.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
@@ -8,7 +8,10 @@ import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
 @Embeddable
-@Data
+@Getter
+@AllArgsConstructor
+@Setter
+@NoArgsConstructor
 public class ServicoRealizadoPK implements Serializable {
     private static final long serialVersionUID = 1L;
 

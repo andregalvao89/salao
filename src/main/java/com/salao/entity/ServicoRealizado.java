@@ -1,15 +1,16 @@
 package com.salao.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Data
 @Entity
+@Getter
+@Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ServicoRealizado implements Serializable {
 
     private static final long serialVersionUID = 1L;

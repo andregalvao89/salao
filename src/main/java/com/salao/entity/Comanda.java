@@ -51,7 +51,7 @@ public class Comanda implements Serializable {
         return FormaPagamento.toEnum(formaPagamento);
     }
 
-    @JsonIgnore
+    //@JsonIgnore
     public Long getId() {
         return id;
     }

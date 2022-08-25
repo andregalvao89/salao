@@ -15,7 +15,6 @@ public class ComandaService {
     private ComandaRepository comandaRepository;
 
     public List<Comanda> getAllComandas() {
-
         return comandaRepository.findAll();
     }
 
