@@ -38,5 +38,10 @@ public class ClienteController {
         return ResponseEntity.created(uri).build();
     }
 
-
+    @RequestMapping(value="/{id}", method=RequestMethod.PUT)
+    public ResponseEntity<Void> update(@RequestBody Cliente obj, @PathVariable Long id) {
+        obj.setId(id);
+        obj = clienteService.update(obj);
+        return ResponseEntity.noContent().build();
+    }
 }
