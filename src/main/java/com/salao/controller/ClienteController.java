@@ -1,5 +1,6 @@
 package com.salao.controller;
 
+import com.salao.dto.ClienteDTO;
 import com.salao.entity.Cliente;
 import com.salao.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/cliente")
@@ -18,9 +20,10 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @GetMapping
-    public ResponseEntity<List<Cliente>> getAllClients() {
-        List<Cliente> allClientes = clienteService.getAllClientes();
-        return ResponseEntity.ok(allClientes);
+    public ResponseEntity<List<ClienteDTO>> findAll() {
+        List<Cliente> list = clienteService.findAll();
+        List<ClienteDTO> listDto = list.stream().map(obj -> new ClienteDTO(obj)).collect(Collectors.toList());
+        return ResponseEntity.ok().body(listDto);
     }
 
     @GetMapping(value = "/{id}")

@@ -51,6 +51,10 @@ public class ClienteService {
             throw new DataIntegrityException("Não é possível excluir um cliente que possui comanda");
         }
     }
+
+    public List<Cliente> findAll() {
+        return clienteRepository.findAll();
+    }
 }
 
 
