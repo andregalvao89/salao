@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -47,8 +48,28 @@ public class SalaoApplication implements CommandLineRunner {
         cliente2.setDataNascimento(LocalDate.now());
         cliente2.setTelefone("4342234");
 
+        Cliente cliente3 = new Cliente();
+        cliente3.setNome("Ramalho");
+
+        Cliente cliente4 = new Cliente();
+        cliente4.setNome("Marcelo");
+
+        Cliente cliente5 = new Cliente();
+        cliente5.setNome("Pedro");
+
+        Cliente cliente6 = new Cliente();
+        cliente6.setNome("Raissa");
+
+        Cliente cliente7 = new Cliente();
+        cliente7.setNome("Vanessa");
+
         clienteRepository.save(cliente1);
         clienteRepository.save(cliente2);
+        clienteRepository.save(cliente3);
+        clienteRepository.save(cliente4);
+        clienteRepository.save(cliente5);
+        clienteRepository.save(cliente6);
+        clienteRepository.save(cliente7);
 
         Profissional profissional1 = new Profissional();
         profissional1.setEmail("clararayssaaragao@hotmail.com");
