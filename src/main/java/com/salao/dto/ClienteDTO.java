@@ -23,8 +23,6 @@ public class ClienteDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Long id;
-
-    @NotEmpty(message = "Preenchimento obrigatório")
     private String nome;
     private String email;
 
