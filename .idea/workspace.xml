@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e1b5701-c353-4767-be12-d75cb5749f80" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/controller/ProfissionalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/controller/ServicoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/controller/servicoRealizadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/salao" beforeDir="false" afterPath="$PROJECT_DIR$/salao" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salao/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/salao/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salao/src/main/java/com/salao/controller/ComandaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/controller/ComandaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ComandaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ComandaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ProfissionalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ProfissionalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ServicoRealizadoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ServicoRealizadoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ServicoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/salao/src/main/java/com/salao/services/ServicoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/salao/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/salao/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +71,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.salao.controller" />
+      <recent name="com.salao.repositories" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +99,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="dev-offshore" />
+                        <option value="origin/dev-offshore" />
                       </list>
                     </value>
                   </entry>
@@ -100,17 +113,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/salao/src/main/java/com/salao/SalaoApplication.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
